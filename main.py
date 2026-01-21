@@ -2,10 +2,11 @@ import json
 import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
+import os
 
-TOKEN = "8331060607:AAFZ8DE786GEWByeEC7pYnR_q8PXvODG6UA"
-ADMIN_ID = 8591553697
-QR_LINK = "https://instasize.com/p/c9ecaad2defe213cb86e9190cf7cc248f612dc555a6d4085f10c1f12e3e62fcd"
+TOKEN = os.getenv("TOKEN")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
+QR_LINK = os.getenv("QR_LINK")
 
 DATA_FILE = "data.json"
 
